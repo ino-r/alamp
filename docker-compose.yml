@@ -1,0 +1,14 @@
+version: '2'
+services:
+  web:
+    build: httpd
+    ports:
+      - 80:80
+    links:
+      - database
+    volumes:
+      - ./packages/:/root/packages/
+  database:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: password
