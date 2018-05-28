@@ -5,6 +5,7 @@ RUN yum -y update && \
       httpd24 \
       mysql57 \
       php56 \
+      php56-mbstring \
       php56-mysqlnd \
       which && \
     yum clean all
