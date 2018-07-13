@@ -7,7 +7,9 @@ RUN yum -y update && \
       php56 \
       php56-mbstring \
       php56-mysqlnd \
-      which && \
+      which \
+      mod24_ssl \
+      postfix && \
     yum clean all
 
 EXPOSE 80
